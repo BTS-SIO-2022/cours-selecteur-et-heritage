@@ -1,0 +1,167 @@
+/* Les différents sélecteurs en css 
+
+1) Balise
+
+a { 
+    propriété : valeur;
+}
+
+2) ID
+
+<p id="product"> blable </p>
+
+#product {
+    propriété : valeur;
+}
+
+3) Classe
+
+<p class="product"> blable </p>
+
+.product {
+    propriété : valeur;
+}
+
+<p class="product product-item active">texte</p>
+
+.product {
+     propriété : valeur;
+}
+
+.product-item {
+    propriété : valeur;
+}
+
+.product.product-item.active {
+    propriété : valeur;
+}
+
+4) Sélecteur enfant
+
+On utilise un chevron >. Ici je vise les a qui sont directement des enfants de header
+
+header > a {
+    propriété : valeur;
+}
+
+5) Sélecteur descendant
+
+On utilise un espace pour séparer les expressions. Ici je vise tous les a se trouvant dans le header
+
+header a {
+    propriété : valeur;
+}
+
+6) Sélecteur voisin direct
+On utilise le +. Ici on vise l'élément voision direct
+
+h2 + p {
+    propriété : valeur;
+}
+
+7) Sélecteur d'attribut
+On utilise [attribut]. Ici on vise tous les éléments ayant l'attribut spécifié. On peut aller encore en précisant la valeur de l'attribut
+
+a[href="#"]{
+    color : violet;  
+}
+
+8) Sélecteur universel
+On utilise * . Ici on vise l'ensemble des éléments de mon document. On peut aussi utiliser :root 
+https://developer.mozilla.org/fr/docs/Web/CSS/Universal_selectors
+lien vers la doc : https://developer.mozilla.org/fr/docs/Web/CSS/:root
+
+:root {
+    propriété : valeur
+}
+
+* {
+    propriété : valeur
+}
+
+9) Le sélecteur de voisins
+
+Ici on utilise ~ . Permet de viser l'ensemble des voisins d'un élément
+
+.test ~ p {
+    propriété : valeur
+
+}
+
+10) Les combinaisons
+
+En combinant plusieurs sélecteurs, je peux cibler un élément très précisément
+
+section.toto p.salut strong {
+    color : red;
+}
+
+11) Les pseudo-classes
+Permet de cibler un élément en fonction de sa pseudo-classe, c'est-à-dire de son "état"
+
+a {
+    color : black
+}
+
+a:hover {
+    color: red;
+}
+
+*/
+
+/* HERITAGE EN CSS */
+
+/*
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.toto {
+    font-family: 'Times New Roman', Times, serif;
+}
+*/
+
+/*Exemple de conflit css*/
+
+p {
+    color : red;
+    text-decoration: underline;
+}
+
+.bigorange {
+    color: orange;
+    font-size: 24px;
+}
+
+#green {
+    color :green;
+}
+
+#yellow {
+    color: yellow ;
+}
+
+/*
+En cas de conflit, CSS va vérifier plusieurs éléments et va appliquer un ordre de préférence. Les trois grands facteurs : 
+
+- la présence ou non du mot-clé !important
+
+- la précision du sélecteur
+
+ID est plus fort que la CLASSE qui est plus forte que l'ELEMENT
+id > class > balise html
+
+- l'ordre de déclaration dans son code
+
+*/
+
+
+
+
+
+
+
+
+
+
